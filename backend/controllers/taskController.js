@@ -146,6 +146,7 @@ export const updateTask = async (req, res) => {
     );
     if (!updatedTask) {
       return res.status(404).json({
+        success: false,
         message: "Task not found",
       });
     }
@@ -184,6 +185,7 @@ export const deleteTask = async (req, res) => {
     });
     if (!deleteTask) {
       return res.status(404).json({
+        success: false,
         message: "Task not found",
       });
     }
